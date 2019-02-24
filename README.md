@@ -27,7 +27,7 @@ class User < ApplicationRecord
 
 include Nullifyable
 
-nullify :attribute1, attribute2
+nullify :attribute1, :attribute2
 ```
 
 That's it...
