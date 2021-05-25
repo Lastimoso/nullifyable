@@ -14,7 +14,9 @@ ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":me
 
 class User < ActiveRecord::Base
   include Nullifyable
-  nullify :first_name, :last_name
+  nullify :first_name, :last_name, :external_id
+
+  store_accessor :metadata, :external_id
 end
 
 def setup_db
@@ -24,6 +26,7 @@ def setup_db
         t.string :email, :limit => 255, :null => false
         t.string :first_name, :limit => 100, :null => true
         t.string :last_name, :limit => 100, :null => true
+        t.json :metadata, default: {}, null: false
       end
     end
   end

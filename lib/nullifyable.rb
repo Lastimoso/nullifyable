@@ -6,7 +6,7 @@ module Nullifyable
 
   module ClassMethods
     attr_reader :nullifyable_attributes
-    
+
     private
 
     def nullify(*attributes)
@@ -19,9 +19,12 @@ module Nullifyable
   end
 
   private
+
   def nullify_blank_fields
+    return if self.class.nullifyable_attributes.blank?
+
     self.class.nullifyable_attributes.each do |attr|
-      self[attr] = nil if self[attr].blank?
-    end if self.class.nullifyable_attributes.present?
+      send("#{attr}=", nil) if send(attr).blank?
+    end
   end
 end
