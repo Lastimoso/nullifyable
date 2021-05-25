@@ -2,51 +2,50 @@ PATH
   remote: .
   specs:
     nullifyable (0.1.0)
-      activerecord (>= 4.0)
+      activerecord (>= 6.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (5.2.2)
-      activesupport (= 5.2.2)
-    activerecord (5.2.2)
-      activemodel (= 5.2.2)
-      activesupport (= 5.2.2)
-      arel (>= 9.0)
-    activesupport (5.2.2)
+    activemodel (6.1.3.2)
+      activesupport (= 6.1.3.2)
+    activerecord (6.1.3.2)
+      activemodel (= 6.1.3.2)
+      activesupport (= 6.1.3.2)
+    activesupport (6.1.3.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
     ansi (1.5.0)
-    arel (9.0.0)
-    builder (3.2.3)
-    concurrent-ruby (1.1.4)
-    i18n (1.3.0)
+    builder (3.2.4)
+    concurrent-ruby (1.1.8)
+    i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    minitest (5.11.3)
-    minitest-reporters (1.3.5)
+    minitest (5.14.4)
+    minitest-reporters (1.4.3)
       ansi
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    rake (10.5.0)
-    ruby-progressbar (1.10.0)
-    sqlite3 (1.3.13)
-    thread_safe (0.3.6)
-    tzinfo (1.2.5)
-      thread_safe (~> 0.1)
+    rake (13.0.3)
+    ruby-progressbar (1.11.0)
+    sqlite3 (1.4.2)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 1.16)
-  minitest (~> 5.0)
-  minitest-reporters (~> 1.3)
+  bundler (~> 2.2)
+  minitest (~> 5.14)
+  minitest-reporters (~> 1.4)
   nullifyable!
-  rake (~> 10.0)
-  sqlite3 (~> 1.3)
+  rake (~> 13.0)
+  sqlite3 (~> 1.4)
 
 BUNDLED WITH
-   1.16.1
+   2.2.17
